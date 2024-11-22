@@ -1,27 +1,55 @@
 * {
   margin: 0;
-  padding: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
 }
 
 .grid {
   display: grid;
-  grid-template-areas:
-    "nav"
-    "header"
-    "main"
-    "footer";
-  min-height: 100vh;
-  grid-template-rows: auto auto 1fr auto;
 }
 
-.box {
-  border: 1px solid;
+@media (max-width: 576px) {
+  .grid {
+    grid-template-areas:
+      "nav"
+      "section"
+      "main"
+      "footer";
+    min-height: 100vh;
+    grid-template-rows: auto auto 1fr auto;
+  }
 }
 
-.header {
-  grid-area: header;
+@media (min-width: 576px) {
+  .grid {
+    grid-template-areas:
+      "nav section"
+      "nav main"
+      "nav main"
+      "footer main";
+    min-height: 100vh;
+    grid-template-columns: 1fr 5fr;
+  }
+}
+
+.section {
+  background-color: lightgray;
+  grid-area: section;
+  padding: 0.5em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.filter {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  min-width: 90%;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav {
@@ -34,20 +62,108 @@
   gap: 0.5em;
 }
 
-.nav-button {
+.button {
   border: none;
   background-color: cyan;
+  cursor: pointer;
 }
 
-.mobile-nav {
+.nav-header {
   display: flex;
-  justify-content: center;
-  justify-content: space-between;
   padding: 1em;
+}
+
+@media (max-width: 576px) {
+  .nav-header {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 576px) {
+  .nav-header {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .bars {
+    display: none;
+  }
+}
+
+.desktop-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (max-width: 576px) {
+  .desktop-nav {
+    display: none;
+  }
 }
 
 .main {
   grid-area: main;
+}
+
+.grid-container {
+  display: grid;
+}
+
+@media (max-width: 576px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
+}
+
+@media (min-width: 576px) {
+  .grid-container {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+.card {
+  border: 1px solid lightgray;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+.cover {
+  width: 100%;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5em;
+}
+
+.console {
+  color: gray;
+}
+
+.game-info {
+  cursor: pointer;
+  background-color: rgb(12, 12, 67);
+  color: white;
+  border: none;
+  padding: 0.5em;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+}
+
+.pages button {
+  color: blue;
+  background-color: white;
+  border: solid lightgray;
+  padding: 1em;
+  margin-bottom: 2em;
+  cursor: pointer;
 }
 
 .footer {
@@ -55,12 +171,12 @@
   grid-area: footer;
 }
 .socials {
-    gap: 0.5em;
-    display: flex;
-    justify-content: center;
+  gap: 0.5em;
+  display: flex;
+  justify-content: center;
 }
 
-.rights {
-    text-align: center;
-    padding: 0.5em;
+.copyright {
+  text-align: center;
+  padding: 0.5em;
 }

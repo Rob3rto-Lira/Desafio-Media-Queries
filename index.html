@@ -12,24 +12,128 @@
   </head>
   <body>
     <div class="grid">
-      <header class="header box">header</header>
-      <nav class="nav box">
-        <div class="mobile-nav">
-          <div class="logo">
-            <i class="fa-solid fa-gamepad"></i>
-            <h4>GameNow</h4>
+      <nav class="nav">
+        <div class="nav-container">
+          <div class="nav-header">
+            <button class="logo button">
+              <i class="fa-solid fa-gamepad"></i>
+              <h4>GameNow</h4>
+            </button>
+            <div class="bars">
+              <button class="button"><i class="fa-solid fa-bars"></i></button>
+            </div>
           </div>
-          <div>
-            <button class="nav-button"><i class="fa-solid fa-bars"></i></button>
+          <div class="desktop-nav">
+            <button class="button">Inicio</button>
+            <button class="button">Catálogo</button>
+            <button class="button">Ofertas</button>
+            <button class="button">Contacto</button>
           </div>
         </div>
       </nav>
-      <main class="main box">main</main>
-      <footer class="footer box">
-        <div class="rights">
+      <section class="section">
+        <div class="center">Ordenar por:</div>
+        <div class="center">
+          <button class="filter">
+            <div>Popular</div>
+            <div>v</div>
+          </button>
+        </div>
+      </section>
+      <main class="main">
+        <div class="grid-container">
+          <div class="card">
+            <img src="./assets/IMG/smash.jpg" alt="Producto" class="cover" />
+            <div class="card-content">
+              <h2>Super Smash Bros: Ultimate</h2>
+              <p class="console">SWITCH</p>
+              <button class="game-info">Ver más</button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/IMG/Batman-Arkham-Asylum.jpg"
+              alt="Producto"
+              class="cover"
+            />
+            <div class="card-content">
+              <h2>Batman: Arkham Asylum</h2>
+              <p class="console">PS3</p>
+              <button class="game-info">Ver más</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/IMG/gow.png" alt="Producto" class="cover" />
+            <div class="card-content">
+              <h2>God of War</h2>
+              <p class="console">PS2</p>
+              <button class="game-info">Ver más</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/IMG/valhalla.jpg" alt="Producto" class="cover" />
+            <div class="card-content">
+              <h2>Assassin's Creed: Valhalla</h2>
+              <p class="console">PS5</p>
+              <button class="game-info">Ver más</button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/IMG/borderlands.jpg"
+              alt="Producto"
+              class="cover"
+            />
+            <div class="card-content">
+              <h2>Borderlands: GOTY</h2>
+              <p class="console">PS4</p>
+              <button class="game-info">Ver más</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/IMG/galaxy2.jpg" alt="Producto" class="cover" />
+            <div class="card-content">
+              <h2>Super Mario Galaxy 2</h2>
+              <p class="console">Wii</p>
+              <button class="game-info">Ver más</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/IMG/rdr2.jpeg" alt="Producto" class="cover" />
+            <div class="card-content">
+              <h2>Red Dead Redemption 2</h2>
+              <p class="console">XBOX ONE</p>
+              <button class="game-info">Ver más</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/IMG/halo.jpg" alt="Producto" class="cover" />
+            <div class="card-content">
+              <h2>Halo 4</h2>
+              <p class="console">XBOX 360</p>
+              <button class="game-info">Ver más</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="pages">
+            <button><h3><<</h3></button>
+            <button><h3>1</h3></button>
+            <button><h3>2</h3></button>
+            <button><h3>3</h3></button>
+            <button><h3>>></h3></button>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
           <div class="socials">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
+            <button class="button">
+              <i class="fa-brands fa-facebook"></i>
+            </button>
+            <button class="button">
+              <i class="fa-brands fa-instagram"></i>
+            </button>
           </div>
           <p>Todos los derechos reservados</p>
         </div>
